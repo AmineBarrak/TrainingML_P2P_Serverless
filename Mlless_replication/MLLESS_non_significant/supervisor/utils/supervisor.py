@@ -12,7 +12,7 @@ from .storage_backends import S3Backend
 
 
 
-credentials = pika.PlainCredentials("ranim", "ranimtrabelssi")
+credentials = pika.PlainCredentials("***********", "************")
 broker_url = "b-0b3e161b-54da-47bc-b2ef-05692144f6a9.mq.us-east-1.amazonaws.com"
 # take into account only current step, though save slack steps ahead.
 def supervisor( bucket, executor_id, n_workers, threshold, epochs, n_minibatches, remove_threshold, remove_interval, max_time, slack, n_redis, redis_hosts):

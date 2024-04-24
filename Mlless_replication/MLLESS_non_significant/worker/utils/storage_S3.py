@@ -10,7 +10,7 @@ class StorageIterator:
     def __init__(self, bucket, dataset, worker_id, n_minibatches, seed, n_workers):
         self.i = worker_id
         self.worker_id = worker_id
-        self.s3 = boto3.client('s3', aws_access_key_id='AKIA2XFJ5RUTTHIUMQ7P', aws_secret_access_key='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')
+        self.s3 = boto3.client('s3', aws_access_key_id='*************', aws_secret_access_key='*************')
         self.rand = random.Random(seed)  # Used for pseudo-random minibatch shuffling
         self.minibatches = list(range(n_minibatches))
         self.dataset = dataset
