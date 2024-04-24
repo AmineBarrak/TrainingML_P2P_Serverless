@@ -192,14 +192,7 @@ def train(epoch, net, trainloader, optimizer, criterion, device, worker_index, n
 		if batch_idx == 3:
 			break
 
-	# Average the gradients
-	# Duplicate objects until the count reaches 49
-# 	while len(stored_gradients) < 49:
-	   # stored_gradients += stored_gradients[:]
 
-	# Truncate the list if it exceeds 49
-# 	stored_gradients = stored_gradients[:49]
-	
 	average_start = time.time()
 	averaged_gradients = [np.mean([batch_grads[i] for batch_grads in stored_gradients], axis=0) for i in range(len(stored_gradients[0]))]
 	
