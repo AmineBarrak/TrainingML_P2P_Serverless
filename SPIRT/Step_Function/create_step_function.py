@@ -1,8 +1,5 @@
 import json
 
-
-import json
-
 def create_parallel_branch(index):
     return {
         "StartAt": f"Batch{index}",
@@ -173,4 +170,5 @@ def create_step_function(num_batches):
 if __name__ == "__main__":
     num_batches = 20  # Define the number of batches/gradients to compute in parallel
     sf_definition = create_step_function(num_batches)
-    print(json.dumps(sf_definition, indent=4))
+    with open("state_machine_definition.json", 'w') as file:
+    	json.dump(sf_definition, file, indent=4)
