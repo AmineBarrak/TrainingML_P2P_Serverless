@@ -78,6 +78,13 @@ This work was published in the following:
   doi={10.1109/QRS60937.2023.00069}
 }
 </div>
+<div style="border: 1px solid grey; padding: 10px; margin-top: 10px;">
+
+**Under Review at**
+
+IEEE Transactions on Parallel and Distributed Systems
+
+</div>
 ```
 
   
