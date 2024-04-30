@@ -20,7 +20,7 @@ SPIRT operates on a peer-based system where each worker maintains its own databa
 9. Updating local models.
 
 ### MLLESS
-![MLLESS Architecture](./Replication/Mlless_replication/MLLESS.pdf "MLLESS Framework Architecture")
+![MLLESS Architecture](./Replication/Mlless_replication/MLLESS.png "MLLESS Framework Architecture")
 
 In MLLESS, the workflow includes:
 1. Fetching a minibatch.
