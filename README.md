@@ -64,16 +64,20 @@ The AllReduce-LambdaML framework proceeds as follows:
 ## Publications:
 This work was published in the following:
 
-@INPROCEEDINGS{10366723,
-  author={Barrak, Amine and Jaziri, Mayssa and Trabelsi, Ranim and Jaafar, Fehmi and Petrillo, Fabio},
-  booktitle={2023 IEEE 23rd International Conference on Software Quality, Reliability, and Security (QRS)}, 
-  title={SPIRT: A Fault-Tolerant and Reliable Peer-to-Peer Serverless ML Training Architecture}, 
-  year={2023},
-  volume={},
-  number={},
-  pages={650-661},
-  keywords={Training;Fault tolerance;Scalability;Fault tolerant systems;Computer architecture;Machine learning;Robustness;Distributed Machine Learning;Peer-to-Peer (P2P);Serverless Computing;Fault Tolerance;Robust Aggregation},
-  doi={10.1109/QRS60937.2023.00069}
+@INPROCEEDINGS{
+	10366723,
+
+  	author={Barrak, Amine and Jaziri, Mayssa and Trabelsi, Ranim and Jaafar, Fehmi and Petrillo, Fabio},
+  
+  	booktitle={2023 IEEE 23rd International Conference on Software Quality, Reliability, and Security (QRS)}, 
+  
+  	title={SPIRT: A Fault-Tolerant and Reliable Peer-to-Peer Serverless ML Training Architecture}, 
+  
+  	year={2023},
+
+  	keywords={Training;Fault tolerance;Scalability;Fault tolerant systems;Computer architecture;Machine learning;Robustness;Distributed Machine Learning;Peer-to-Peer (P2P);Serverless Computing;Fault Tolerance;Robust Aggregation},
+  
+  	doi={10.1109/QRS60937.2023.00069}
   }
   
   Under review at: IEEE Transactions on Parallel and Distributed Systems
