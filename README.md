@@ -7,6 +7,7 @@ Serverless computing has revolutionized the way distributed machine learning (ML
 
 ### SPIRT
 ![SPIRT Architecture](./SPIRT/Spirt.pdf "SPIRT Framework Architecture")
+
 SPIRT operates on a peer-based system where each worker maintains its own database and a serverless workflow orchestrated by AWS Step Function. The workflow encompasses:
 1. Fetching minibatches.
 2. Parallel gradient computation.
@@ -20,6 +21,7 @@ SPIRT operates on a peer-based system where each worker maintains its own databa
 
 ### MLLESS
 ![MLLESS Architecture](./Replication/Mlless_replication/MLLESS.pdf "MLLESS Framework Architecture")
+
 In MLLESS, the workflow includes:
 1. Fetching a minibatch.
 2. Computing the gradient.
@@ -31,6 +33,7 @@ In MLLESS, the workflow includes:
 
 ### ScatterReduce-LambdaML
 ![ScatterReduce-LambdaML Architecture](./Replication/ScatterReduce_replication/LambdaScatter_Reduce.pdf "ScatterReduce-LambdaML Framework Architecture")
+
 This approach involves:
 1. Fetching minibatches.
 2. Computing gradients.
@@ -42,6 +45,7 @@ This approach involves:
 
 ### AllReduce-LambdaML
 ![AllReduce-LambdaML Architecture](./Replication/AllReduce_replication/LambdaAll_reduce.pdf "AllReduce-LambdaML Framework Architecture")
+
 The AllReduce-LambdaML framework proceeds as follows:
 1. Fetching a minibatch.
 2. Computing gradients.
