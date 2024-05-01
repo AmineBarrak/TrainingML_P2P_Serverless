@@ -140,29 +140,33 @@ Use the JSON output from the script to create a state machine in AWS Step Functi
 4. Assign IAM Roles:
 Ensure that the IAM roles associated with the state machine have the necessary permissions to invoke the Lambda functions.
 
-#### RedisAI Configuration
-Following this, we compiled the RedisAI module with the enhanced capability using these steps:
+
+#### RedisAI Configuration with Deployment on AWS EC2
+
+Following this, we compiled the RedisAI module with enhanced capabilities using these steps:
 
 <pre> Clear any previous builds: make -C opt clean ALL=1 </pre>
 
 <pre> Build the module: make -C opt </pre>
 
-To integrate the RedisAI module when initiating the Redis server, we utilized the –loadmodule
-command line option and provided the accurate path to the module’s library in the following
-manner:
+The current version is compiled, you do not need to compile again, unless you want to add more features.
 
-<pre> redis-server --loadmodule ./bin/linux-x64-release/install-cpu/redisai.so </pre>
+To deploy RedisAI on an AWS EC2 instance, you would first need to set up an EC2 instance on Amazon Web Services. Ensure that Redis is installed on the EC2 instance. You also need to copy the downloaded RedisAI source code from your repository to the EC2 server.
 
-We have added a new functionality to RedisAI that allows the updating of model parameters directly within the database environment.  
+To integrate the RedisAI module when initiating the Redis server, utilize the `--loadmodule` command line option and provide the accurate path to the module’s library, as shown below:
 
-The new command provided by RedisAI for updating model parameters directly in Redis is as follows:
+<pre> redis-server --port 6380 --loadmodule ./bin/linux-x64-release/src/redisai.so </pre>
+
+We have added new functionality to RedisAI that allows the updating of model parameters directly within the database environment. The new command provided by RedisAI for updating model parameters directly in Redis is as follows:
 
 <pre> AI.ModelUpdate Params key Lr Grads key </pre>   
 Parameters:
 
 * Params key: The key in Redis where the model parameters are stored.
 * Lr: Learning rate to be applied during the update.
-* Grads key: The key where the gradients are stored that will be used to update the model.
+* Grads key: The key where the gradients are stored that will be used to update the model. 
+
+This setup allows you to manage and update your AI models directly on your EC2 instance, leveraging the power and flexibility of cloud computing with AWS.
 
 
 ### MLLESS Setup
@@ -179,7 +183,7 @@ The MLLESS framework can be deployed with or without a significant update. Follo
    - **Worker Function:**
      - Similarly, deploy all the content from the appropriate worker folder to a new Lambda function named 'Worker'.
 
-3. **Automated Triggering**
+3. **Automated Parallel Triggering**
    - **Server:**
      - Use the `trigger_server.py` script to manually or automatically trigger the server function.
    - **Worker:**
