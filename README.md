@@ -57,31 +57,28 @@ The AllReduce-LambdaML framework proceeds as follows:
 
 ## Execution of the Frameworks:
 This works was implemeted within AWS plateform.
-### Layers Configuration
-AWS Lambda Layers Configuration
-This section provides a configuration setup for AWS Lambda Layers. Lambda functions require libraries and dependencies to fulfill their
-functionalities. This posed challenges due to AWS Lambda’s deployment package size limitations.
-These packages must adhere to a 50 MB limit when compressed, with the uncompressed
-file size not exceeding 250 MB. In contrast, ARM-based layers inherently offer a reduced size.
-To facilitate seamless deployment on our custom ARM architecture, we packaged ML dependencies,
-including the Pytorch library, in a zip file. In cases where additional dependencies
-are necessary, they can be seamlessly integrated as separate layers within the AWS Lambda
-service.
+### AWS Lambda Layers Configuration
+This section provides a configuration setup for AWS Lambda Layers. Lambda functions require libraries and dependencies to fulfill their functionalities. This posed challenges due to AWS Lambda’s deployment package size limitations. These packages must adhere to a 50 MB limit when compressed, with the uncompressed file size not exceeding 250 MB. In contrast, ARM-based layers inherently offer a reduced size. To facilitate seamless deployment on our custom ARM architecture, we packaged ML dependencies, including the Pytorch library, in a zip file. In cases where additional dependencies are necessary, they can be seamlessly integrated as separate layers within the AWS Lambda service.
+
 To use the provided Lambda layers, follow these steps to download and integrate them into your AWS Lambda function:
 
+1. Navigate to the Lambda Layers Directory:
+   ```bash
+   cd TrainingML_P2P_Serverless/Lambda_Layers
+   ```
 
-1.   Navigate to the Lambda Layers Directory:
+2. Download the Required Layers:
+   ```bash
+   # Example: Download a specific layer (replace 'your_layer.zip' with the actual file name)
+   wget https://github.com/AmineBarrak/TrainingML_P2P_Serverless/raw/main/Lambda_Layers/your_layer.zip
+   ```
 
-<pre> cd TrainingML_P2P_Serverless/Lambda_Layers </pre>
-
-2.   Download the Required Layers:
-
-<pre># Example: Download a specific layer (replace 'your_layer.zip' with the actual file name)
-wget https://github.com/AmineBarrak/TrainingML_P2P_Serverless/raw/main/Lambda_Layers/your_layer.zip </pre>
 3. Upload Layers to AWS Lambda:
-Use the AWS CLI or AWS Management Console to upload the downloaded ZIP file as a new layer in Lambda.
-<pre> aws lambda publish-layer-version --layer-name "YourLayerName" --zip-file fileb://your_layer.zip --compatible-architectures "arm64"
- </pre>
+   Use the AWS CLI or AWS Management Console to upload the downloaded ZIP file as a new layer in Lambda.
+   ```bash
+   aws lambda publish-layer-version --layer-name "YourLayerName" --zip-file fileb://your_layer.zip --compatible-architectures "arm64"
+   ```
+
  
  
 
@@ -262,7 +259,9 @@ This work was published in the following:
 **Citation**
 
 ```bibtex
-@INPROCEEDINGS{10366723,
+@INPROCEEDINGS{10366723
+
+,
   author={Barrak, Amine and Jaziri, Mayssa and Trabelsi, Ranim and Jaafar, Fehmi and Petrillo, Fabio},
   booktitle={2023 IEEE 23rd International Conference on Software Quality, Reliability, and Security (QRS)},
   title={SPIRT: A Fault-Tolerant and Reliable Peer-to-Peer Serverless ML Training Architecture},
@@ -272,11 +271,11 @@ This work was published in the following:
 }
 ```
 
-  
   Under review at: IEEE Transactions on Parallel and Distributed Systems
 
-  
-  
+</div>
+```
+
   
 
 
