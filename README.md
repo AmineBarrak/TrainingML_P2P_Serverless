@@ -269,12 +269,7 @@ This work was published in the following:
   keywords={Training; Fault tolerance; Scalability; Fault tolerant systems; Computer architecture; Machine learning; Robustness; Distributed Machine Learning; Peer-to-Peer (P2P); Serverless Computing; Fault Tolerance; Robust Aggregation},
   doi={10.1109/QRS60937.2023.00069}
 }
-```
 
-  Under review at: IEEE Transactions on Parallel and Distributed Systems
-
-</div>
-```
 
   
 
