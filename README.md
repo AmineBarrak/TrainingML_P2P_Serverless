@@ -54,6 +54,18 @@ The AllReduce-LambdaML framework proceeds as follows:
 5. Sending the aggregated gradient back to the database.
 6. Each worker updates their local models with the aggregated gradient.
 
+### GPU-Based Baseline
+
+![GPU-Based Training Architecture](./Replication/GPU-base_replication/GPU.png "GPU-Based Framework Architecture")
+
+The GPU-based training framework proceeds as follows:
+
+1. Fetching a minibatch.
+2. Transferring the minibatch to GPU memory.
+3. Executing the forward propagation on the GPU to compute predictions.
+4. Performing the backward propagation on the GPU to calculate gradients.
+5. Updating the model parameters directly on the GPU via the optimizer.
+6. Logging metrics (e.g., loss, accuracy) and proceeding to the next minibatch.
 
 ## Execution of the Frameworks:
 This works was implemeted within AWS plateform.
@@ -250,6 +262,49 @@ To set up and run the ALLreduce framework, follow these steps:
    - This script facilitates managing and automating the triggering process for all Lambda instances concurrently, ensuring efficient parallel execution.
 
 
+Here's the updated version with your preferred instruction style:
+
+---
+
+### GPU-Based Setup
+
+To run the GPU-based training baseline, follow these steps:
+
+1. **Launch a GPU Instance**
+
+   * Use a GPU-enabled instance (e.g., `g4dn.xlarge` on AWS EC2).
+   * Make sure Python 3.8+ is installed.
+
+2. **Install Required Packages**
+
+   * Install the following packages:
+
+     ```bash
+     pip install torch torchvision boto3 pillow
+     ```
+
+3. **Prepare the Training Script**
+
+   * Script location: `./Replication/GPU_base_replication/train_worker.py`
+
+4. **S3 Configuration**
+
+   * Make sure your AWS credentials are configured:
+
+     ```bash
+     aws configure
+     ```
+   * In the `train_worker.py` script, **replace the S3 bucket name** with your own bucket name where the dataset or logs are stored.
+
+5. **Run the Training**
+
+   * Execute the script with:
+
+     ```bash
+     python train_worker.py
+     ```
+
+---
 
 ## Publications:
 This work was published in the following:
