@@ -304,26 +304,7 @@ To run the GPU-based training baseline, follow these steps:
      python train_worker.py
      ```
 
----
 
-## Publications:
-This work was published in the following:
-
-<div style="border: 1px solid grey; padding: 10px;">
-
-**Citation**
-
-```bibtex
-@INPROCEEDINGS{10366723
-
-,
-  author={Barrak, Amine and Jaziri, Mayssa and Trabelsi, Ranim and Jaafar, Fehmi and Petrillo, Fabio},
-  booktitle={2023 IEEE 23rd International Conference on Software Quality, Reliability, and Security (QRS)},
-  title={SPIRT: A Fault-Tolerant and Reliable Peer-to-Peer Serverless ML Training Architecture},
-  year={2023},
-  keywords={Training; Fault tolerance; Scalability; Fault tolerant systems; Computer architecture; Machine learning; Robustness; Distributed Machine Learning; Peer-to-Peer (P2P); Serverless Computing; Fault Tolerance; Robust Aggregation},
-  doi={10.1109/QRS60937.2023.00069}
-}
 
 
   
