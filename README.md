@@ -1,4 +1,4 @@
-# Comparative Overview of Serverless Machine Learning Frameworks
+# A Comparative Study of CPU-Based Serverless and GPU Based Training Architectures
 
 ## Introduction to Serverless Computing
 Serverless computing has revolutionized the way distributed machine learning (ML) tasks are performed by eliminating the need for managing servers and allowing developers to focus purely on code. This document explores various serverless frameworks that have been specifically designed to enhance distributed ML tasks in a serverless environment.
